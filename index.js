@@ -86,6 +86,13 @@ gfw.parse("keywords");
 
 const t = Date.now();
 
+/**
+//大括号写类型
+@param{string}text 待检测的字符串
+@param{string}tag 用于替换敏感词的字符。默认“*”
+@param{Boolean}countMode true为使用过滤替换模式，false是使用计数模式。默认“false”
+@returns 返回过滤后的文本或者敏感词计数
+*/
 const dfaFilter = (text, tag = "*", countMode = false) => {
   const [resultTxt, count] = gfw.filter(text, tag);
   if (!countMode) {
@@ -93,5 +100,4 @@ const dfaFilter = (text, tag = "*", countMode = false) => {
   }
   return count;
 };
-console.log(dfaFilter('我草 哈哈哈'))
 exports.dfaFilter = dfaFilter;
