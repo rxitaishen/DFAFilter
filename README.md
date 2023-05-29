@@ -5,5 +5,8 @@
 npm install dfa-filter
 
 // 使用
-import 
+import dfaFilter from 'dfa-filter'
+
+@params
+dfaFilter("the text for test", "*", flase)
 ```

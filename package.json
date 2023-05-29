@@ -2,7 +2,7 @@
   "name": "dfa-filter",
   "version": "1.0.0",
   "description": "a DFA algorithm achived by NodeJS",
-  "main": "DFAFilter.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

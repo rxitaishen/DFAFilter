@@ -1,3 +1,4 @@
+const fs = require("fs");
 class DFAFilter {
   constructor() {
     this.keyword_chains = {};
@@ -82,7 +83,7 @@ class DFAFilter {
 
 const gfw = new DFAFilter();
 gfw.parse("keywords");
-const fs = require("fs");
+
 const t = Date.now();
 
 const dfaFilter = (text, tag = "*", countMode = false) => {
@@ -92,5 +93,5 @@ const dfaFilter = (text, tag = "*", countMode = false) => {
   }
   return count;
 };
-
-export default dfaFilter;
+console.log(dfaFilter('我草 哈哈哈'))
+exports.dfaFilter = dfaFilter;
