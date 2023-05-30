@@ -8,7 +8,13 @@ npm install dfa-filter
 // 使用
 import dfaFilter from 'dfa-filter'
 
-
+/**
+//大括号写类型
+@param{string}text 待检测的字符串
+@param{string}tag 用于替换敏感词的字符。默认“*”
+@param{Boolean}countMode true为使用过滤替换模式，false是使用计数模式。默认“false”
+@returns 返回过滤后的文本或者敏感词计数
+*/
 dfaFilter("the text for test", "*", flase)
 ```
 
