@@ -1,4 +1,3 @@
-const fs = require("fs");
 class DFAFilter {
   constructor() {
     this.keyword_chains = {};
@@ -37,11 +36,8 @@ class DFAFilter {
   }
 
   parse(path) {
-    const text = fs.readFileSync(path, "utf-8");
-    text
-      .trim()
-      .split(/\r?\n/)
-      .forEach((keyword) => this.add(keyword));
+    const text = require(path).data
+    text.forEach((keyword) => this.add(keyword));
   }
 
   filter(message, repl = "*") {
@@ -82,9 +78,7 @@ class DFAFilter {
 }
 
 const gfw = new DFAFilter();
-gfw.parse("keywords");
-
-const t = Date.now();
+gfw.parse("./keywords.json");
 
 /**
 //大括号写类型
@@ -100,4 +94,5 @@ const dfaFilter = (text, tag = "*", countMode = false) => {
   }
   return count;
 };
+
 exports.dfaFilter = dfaFilter;
