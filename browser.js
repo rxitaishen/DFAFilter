@@ -1,3 +1,4 @@
+import text from './keywords.json'
 class DFAFilter {
   constructor() {
     this.keyword_chains = {};
@@ -35,9 +36,8 @@ class DFAFilter {
     }
   }
 
-  parse(path) {
-    const text = require(path).data
-    text.forEach((keyword) => this.add(keyword));
+  parse() {
+    text.data.forEach((keyword) => this.add(keyword));
   }
 
   filter(message, repl = "*") {
@@ -78,7 +78,7 @@ class DFAFilter {
 }
 
 const gfw = new DFAFilter();
-gfw.parse("./keywords.json");
+gfw.parse();
 
 /**
 //大括号写类型
@@ -95,4 +95,4 @@ const dfaFilter = (text, tag = "*", countMode = false) => {
   return count;
 };
 
-module.exports = dfaFilter;
+export default dfaFilter;

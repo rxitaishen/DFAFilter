@@ -5,8 +5,11 @@
 // 安装dfafilter包
 npm install dfa-filter
 
-// 使用
+// browser 环境使用
 import dfaFilter from 'dfa-filter'
+
+// node 环境使用
+require(dfaFilter)
 
 /**
 //大括号写类型
