@@ -1,6 +1,6 @@
 {
   "name": "dfa-filter",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "a DFA algorithm achived by NodeJS",
   "main": "index.js",
   "scripts": {
