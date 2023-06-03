@@ -28,5 +28,8 @@ DFA敏感词检测算法是一种高效的字符串匹配算法，可以快速�
 
 DFA（Deterministic Finite Automaton）敏感词检测算法是一种基于有限状态自动机的高效字符串匹配算法，通过将敏感词构建成一棵状态转移图，将文本逐个字符进行匹配，并根据状态转移图的规则进行状态的转移来检测是否包含敏感词，具有快速、高效的特点，在实际应用中被广泛使用。
 
+# 欢迎 issue
+远程仓库地址：https://github.com/rxitaishen/DFAFilter
+
 # 参考资料
 https://github.com/obaby/dfa-python-filter
